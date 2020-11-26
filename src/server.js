@@ -4,6 +4,8 @@ import session from 'express-session'
 
 import * as sapper from '@sapper/server';
 
+const router = express.Router()
+
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
@@ -20,6 +22,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use(bodyParser.json())
+
 
 
 app.use(express.static('static'))
